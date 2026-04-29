@@ -1,5 +1,5 @@
 import React from 'react';
-import GoaImage from '../assets/Goa.webp'
+import GoaImage from '../assets/GoaTrip.png'
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="hero-img-card">
             <div className="hero-img"><img src={GoaImage} alt=" Goa Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></div>
             <div className="hero-card-body">
-              <div className="hero-card-title">Goa Trip 🌴</div>
+              <div className="hero-card-title">Goa Trip </div>
               <div className="hero-card-row">
                 <span className="hero-card-label">Total Cost</span>
                 <span className="hero-card-val">₹30,000</span>

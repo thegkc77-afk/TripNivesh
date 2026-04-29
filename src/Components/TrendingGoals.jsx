@@ -1,4 +1,8 @@
 import React from 'react';
+import First from '../assets/First.png'
+import KashmirTrip from '../assets/KashmirTrip.png'
+import BaliTrip from '../assets/BaliTrip.png'
+import ParisTrip from '../assets/ParishTrip.png'
 
 const TrendingGoals = () => {
   return (
@@ -8,7 +12,9 @@ const TrendingGoals = () => {
       <p className="section-sub">Start saving for any of these trips today</p>
       <div className="dest-grid">
         <div className="dest-card">
-          <div className="dest-bg dest-bg-1">🏖️</div>
+          <div className="dest-bg dest-bg-1">
+            <img src={First} alt="Goa trip" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <div className="dest-gradient"></div>
           <div className="dest-info">
             <span className="dest-days">5 DAYS</span>
@@ -22,7 +28,9 @@ const TrendingGoals = () => {
           <div className="dest-overlay"><button className="dest-overlay-btn">Save for This →</button></div>
         </div>
         <div className="dest-card">
-          <div className="dest-bg dest-bg-2">🏔️</div>
+          <div className="dest-bg dest-bg-2">
+            <img src={KashmirTrip} alt="Kashmir trip" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <div className="dest-gradient"></div>
           <div className="dest-info">
             <span className="dest-days">7 DAYS</span>
@@ -36,7 +44,9 @@ const TrendingGoals = () => {
           <div className="dest-overlay"><button className="dest-overlay-btn">Save for This →</button></div>
         </div>
         <div className="dest-card">
-          <div className="dest-bg dest-bg-3">🌴</div>
+          <div className="dest-bg dest-bg-3">
+            <img src={BaliTrip} alt="Bali trip" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <div className="dest-gradient"></div>
           <div className="dest-info">
             <span className="dest-days">7 DAYS</span>
@@ -50,7 +60,9 @@ const TrendingGoals = () => {
           <div className="dest-overlay"><button className="dest-overlay-btn">Save for This →</button></div>
         </div>
         <div className="dest-card">
-          <div className="dest-bg dest-bg-4">🗼</div>
+          <div className="dest-bg dest-bg-4">
+            <img src={ParisTrip} alt="Paris trip" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <div className="dest-gradient"></div>
           <div className="dest-info">
             <span className="dest-days">6 DAYS</span>
