@@ -1,0 +1,371 @@
+/* ══════════════════════════════════
+SECTION 1 — WHY CHOOSE US
+══════════════════════════════════ */
+.why-section {
+  padding: 80px 24px;
+  background: #0B0914;
+  /* very dark purple/navy background */
+  position: relative;
+  overflow: hidden;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(196, 241, 53, 0.1);
+  border: 1px solid rgba(196, 241, 53, 0.25);
+  color: #C4F135;
+  /* font-family: 'Syne', sans-serif; */
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-title span {
+  color: #C4F135;
+}
+
+.section-sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 64px;
+}
+
+.why-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why-card {
+  background: #151322;
+  /* solid dark background */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196, 241, 53, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(196, 241, 53, 0.05);
+}
+
+.why-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.icon-red {
+  background: #fff;
+  color: #ef4444;
+}
+
+.icon-purple {
+  background: #fff;
+  color: #a855f7;
+}
+
+.icon-orange {
+  background: #fff;
+  color: #f97316;
+}
+
+.icon-blue {
+  background: #fff;
+  color: #3b82f6;
+}
+
+.icon-teal {
+  background: #fff;
+  color: #14b8a6;
+}
+
+.why-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.coming-soon {
+  font-size: 9px;
+  font-weight: 800;
+  background: #C4F135;
+  color: #0D0B1E;
+  padding: 4px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
+.why-card-desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Inner mini card */
+.why-inner-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.why-inner-card.green {
+  background: rgba(196, 241, 53, 0.05);
+  color: #C4F135;
+}
+
+.why-inner-card.purple {
+  background: rgba(168, 85, 247, 0.08);
+  color: #c084fc;
+}
+
+.why-inner-card.yellow {
+  background: rgba(251, 191, 36, 0.05);
+  color: #fbbf24;
+}
+
+.why-inner-card.teal {
+  background: rgba(20, 184, 166, 0.05);
+  color: #2dd4bf;
+}
+
+/* Progress bar inside card */
+.mini-progress {
+  margin-top: auto;
+}
+
+.mini-prog-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.mini-prog-bar {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.mini-prog-fill {
+  background: linear-gradient(90deg, #7C3AED, #C4F135);
+  height: 100%;
+  border-radius: 100px;
+}
+
+/* Save flow */
+.save-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.save-flow-item {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 12px 6px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.save-flow-item span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.save-flow-arrow {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Trust bar */
+.trust-bar {
+  max-width: 1100px;
+  margin: 48px auto 0;
+  background: #151322;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.trust-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-bar-left span:last-child {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.trust-items {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* CTA Banner */
+.cta-banner {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  background: linear-gradient(135deg, #6d28d9, #4c1d95);
+  border-radius: 24px;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.cta-banner-icon {
+  font-size: 32px;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  color: #6d28d9;
+  padding: 12px 20px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.cta-banner-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.cta-banner-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+}
+
+.cta-banner-sub2 {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cta-btn {
+  background: #C4F135;
+  color: #0B0914;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 18px 40px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(196, 241, 53, 0.3);
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .trust-bar {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+}

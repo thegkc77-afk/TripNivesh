@@ -6,7 +6,7 @@ import ParisTrip from '../assets/ParishTrip.png'
 
 const TrendingGoals = () => {
   return (
-    <section className="trending">
+    <section className="trending" id="explore">
       <div className="section-label">Trending Now</div>
       <h2 className="section-title" style={{ color: '#fff' }}>Popular <span>Destinations</span></h2>
       <p className="section-sub">Start saving for any of these trips today</p>

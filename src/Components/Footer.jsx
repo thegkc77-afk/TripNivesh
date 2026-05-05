@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,16 +10,16 @@ const Footer = () => {
           <a className="footer-logo" href="#">Trip<span>Nivesh</span></a>
           <p>Your ultimate companion for disciplined travel savings. Plan, save, and explore the world without financial stress.</p>
           <div className="social-links">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
+            {/* <a href="#"><FaFacebookF /></a> */}
+            {/* <a href="#"><FaTwitter /></a> */}
+            <a href="http://instagram.com/tripnivesh?igsh=MTQ3OTJmOTlwbHVjcg%3D%3D" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            {/* <a href="#"><FaLinkedinIn /></a> */}
           </div>
         </div>
         <div className="footer-links">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
+            <li><Link to="/about">About Us</Link></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Press</a></li>
             <li><a href="#">Blog</a></li>
@@ -30,7 +31,7 @@ const Footer = () => {
             <li><a href="#">Help Center</a></li>
             <li><a href="#">Safety Center</a></li>
             <li><a href="#">Community Guidelines</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/#contact">Contact Us</a></li>
           </ul>
         </div>
         <div className="footer-links">

@@ -3,7 +3,7 @@ import { MdEmail, MdPhone, MdLocationOn, MdAccessTime } from 'react-icons/md';
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="section-label">Get In Touch</div>
       <h2 className="section-title" style={{ color: '#fff' }}>We're Here to <span>Help</span></h2>
       <p className="section-sub">Any questions about saving for your trip? We'll reply right away!</p>
@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="contact-icon"><MdLocationOn /></div>
             <div>
               <div className="contact-item-label">Location</div>
-              <div className="contact-item-val">Bhagalpur, Bihar, India</div>
+              <div className="contact-item-val">Bihar, India</div>
             </div>
           </div>
           <div className="contact-item">
