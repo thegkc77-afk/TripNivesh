@@ -53,7 +53,7 @@ const WhyChooseTripNivesh = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="why-card">
+        {/* <div className="why-card">
           <div className="why-card-icon icon-orange"><FaLock /></div>
           <div className="why-card-title">
             <span>Your Money, Your Control</span>
@@ -62,7 +62,7 @@ const WhyChooseTripNivesh = () => {
           <div className="why-inner-card purple" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <FaShieldAlt style={{ color: '#60A5FA' }} /> Secure wallet & escrow features coming soon
           </div>
-        </div>
+        </div> */}
 
         {/* Card 4 */}
         <div className="why-card">
@@ -101,6 +101,18 @@ const WhyChooseTripNivesh = () => {
           <p className="why-card-desc">From planning to booking, our support team is here to make your trip planning super easy.</p>
           <div className="why-inner-card teal" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <FaHeart style={{ color: '#4ADE80' }} /> Real people. Real support. Always.
+          </div>
+        </div>
+
+        {/* Card 7 */}
+        <div className="why-card">
+          <div className="why-card-icon icon-orange"><FaLock /></div>
+          <div className="why-card-title">
+            <span>Safe & Secure Saving</span>
+          </div>
+          <p className="why-card-desc">Your money stays safe while you plan your trip step by step.</p>
+          <div className="why-inner-card purple" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <FaShieldAlt style={{ color: '#60A5FA' }} /> Secure saving systems with trusted partners coming soon
           </div>
         </div>
       </div>
