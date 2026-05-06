@@ -14,9 +14,16 @@ import Signin from './Components/Signin'
 import About from './Pages/About'
 import WhatsAppButton from './Components/WhatsAppButton'
 
+import SEO from './Components/SEO'
+
 function Home() {
   return (
     <>
+      <SEO 
+        title="TripNivesh | Plan, Save, and Travel Stress-Free"
+        description="Plan your dream vacations, save consistently, and travel without financial stress. Set your travel goals, earn rewards, and make your next trip cheaper with TripNivesh."
+        url="https://www.tripnivesh.com/"
+      />
       <Navbar />
       <Hero />
       <HowItWorks />

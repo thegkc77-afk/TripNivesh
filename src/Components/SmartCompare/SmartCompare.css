@@ -30,8 +30,9 @@ SECTION 2 — CALCULATOR
   transition: all 0.4s ease;
 }
 .calc-inputs:hover {
-  border-color: rgba(255,255,255,0.15);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform: translateY(-6px);
+  border-color: rgba(196,241,53,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(196,241,53,0.1);
 }
 .calc-input-title {
   font-family: 'Poppins', sans-serif;

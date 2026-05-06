@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   FaChartBar, FaCalculator, FaInfoCircle, FaGift,
   FaShieldAlt, FaBan, FaTimes, FaLandmark,
@@ -12,53 +12,31 @@ const SmartCompare = () => {
   const [interest, setInterest] = useState(2.5);
   const [reward, setReward] = useState(5);
 
-  const [loanEmi, setLoanEmi] = useState(0);
-  const [totalLoanPaid, setTotalLoanPaid] = useState(0);
-  const [extraPaid, setExtraPaid] = useState(0);
+  // Derived Calculations
+  const r = (interest * 12) / 100 / 12; // monthly interest rate
+  const n = tenure;
+  const P = tripCost;
 
-  const [monthlySaving, setMonthlySaving] = useState(0);
-  const [rewardAmount, setRewardAmount] = useState(0);
-  const [effectiveCost, setEffectiveCost] = useState(0);
-  const [youSave, setYouSave] = useState(0);
-  const [savePercentage, setSavePercentage] = useState(0);
+  let emi;
+  if (r > 0) {
+    emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+  } else {
+    emi = P / n;
+  }
 
-  useEffect(() => {
-    // Loan Calculation
-    const r = (interest * 12) / 100 / 12; // monthly interest rate
-    const n = tenure;
-    const P = tripCost;
+  const loanEmi = Math.round(emi);
+  const totalLoanPaid = Math.round(emi * n);
+  const extraPaid = Math.round(totalLoanPaid - P);
 
-    let emi = 0;
-    if (r > 0) {
-      emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-    } else {
-      emi = P / n;
-    }
+  // Saving Calculation
+  const monthlySaving = Math.round(P / n);
+  const rewardAmount = Math.round((P * reward) / 100);
+  const effectiveCost = Math.round(P - rewardAmount);
 
-    const totalLoan = emi * n;
-    const interestPaid = totalLoan - P;
-
-    setLoanEmi(Math.round(emi));
-    setTotalLoanPaid(Math.round(totalLoan));
-    setExtraPaid(Math.round(interestPaid));
-
-    // Saving Calculation
-    const savingPerMonth = P / n;
-    const rewardVal = (P * reward) / 100;
-    const effective = P - rewardVal;
-
-    setMonthlySaving(Math.round(savingPerMonth));
-    setRewardAmount(Math.round(rewardVal));
-    setEffectiveCost(Math.round(effective));
-
-    // You Save
-    const totalSavedVsLoan = totalLoan - effective;
-    const pct = (totalSavedVsLoan / totalLoan) * 100;
-
-    setYouSave(Math.round(totalSavedVsLoan));
-    setSavePercentage(pct.toFixed(1));
-
-  }, [tripCost, tenure, interest, reward]);
+  // You Save
+  const totalSavedVsLoan = totalLoanPaid - effectiveCost;
+  const youSave = Math.round(totalSavedVsLoan);
+  const savePercentage = totalLoanPaid > 0 ? ((totalSavedVsLoan / totalLoanPaid) * 100).toFixed(1) : 0;
 
   const formatCurrency = (val) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import SEO from '../Components/SEO';
 import './About.css';
 import { Link } from 'react-router-dom';
 import { FaMountain, FaShieldAlt, FaStar } from 'react-icons/fa';
@@ -8,6 +9,11 @@ import { FaMountain, FaShieldAlt, FaStar } from 'react-icons/fa';
 const About = () => {
   return (
     <div className="about-page">
+      <SEO 
+        title="About TripNivesh | Stress-Free Travel Planning"
+        description="Learn how TripNivesh helps you plan and save for your trips. Travel without stress, overspending, or borrowing by setting clear goals and monthly savings."
+        url="https://www.tripnivesh.com/about"
+      />
       <Navbar />
 
       <div className="about-container">

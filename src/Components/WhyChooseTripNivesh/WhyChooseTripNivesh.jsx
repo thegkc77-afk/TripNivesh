@@ -4,7 +4,7 @@ import {
   FaGift, FaStar, FaBullseye, FaUmbrellaBeach, FaLock,
   FaShieldAlt, FaSuitcaseRolling, FaSmileBeam, FaSyncAlt,
   FaCoins, FaPlane, FaHeadphones, FaHeart, FaCheckCircle,
-  FaBan, FaGlobeAsia, FaGlassCheers
+  FaBan, FaGlassCheers
 } from 'react-icons/fa';
 import './WhyChooseTripNivesh.css';
 

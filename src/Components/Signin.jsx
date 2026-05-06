@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from './SEO';
 import './Signup.css'; // Reusing the styles from Signup page
 
 const Signin = () => {
   return (
     <div className="signup-container">
+      <SEO 
+        title="Sign In | TripNivesh"
+        description="Sign in to your TripNivesh account to continue your trip savings journey."
+        url="https://www.tripnivesh.com/signin"
+      />
       <div className="signup-background">
         <div className="signup-circle-1"></div>
         <div className="signup-circle-2"></div>
