@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GoaImage from '../assets/GoaTrip.png'
 
 const Hero = () => {
@@ -15,7 +16,7 @@ const Hero = () => {
             Plan your perfect trip, save a little every month — and travel completely debt-free. No EMI, no credit card stress.
           </p>
           <div className="hero-btns">
-            <a href="#" className="btn-primary">Start Saving Now →</a>
+            <Link to="/signup" className="btn-primary">Start Saving Now →</Link>
           </div>
           <div className="hero-stats">
             <div className="stat"><span className="stat-num">₹0</span><span className="stat-label">No hidden fees</span></div>

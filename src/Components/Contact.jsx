@@ -1,34 +1,63 @@
-import React from 'react';
+import { useState } from 'react';
 import { MdEmail, MdPhone, MdLocationOn, MdAccessTime } from 'react-icons/md';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, subject, message } = formData;
+    
+    // Construct the WhatsApp message
+    const whatsappMessage = `Hi TripNivesh team,\n\nMy name is ${name} (${email}).\n\n*Subject:* ${subject}\n\n*Message:*\n${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Using the phone number from the contact info: 917858965675
+    const whatsappUrl = `https://wa.me/917858965675?text=${encodedMessage}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="section-label">Get In Touch</div>
       <h2 className="section-title" style={{ color: '#fff' }}>We're Here to <span>Help</span></h2>
       <p className="section-sub">Any questions about saving for your trip? We'll reply right away!</p>
       <div className="contact-grid">
-        <div className="contact-form-card">
+        <form className="contact-form-card" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">Full Name</label>
-              <input className="form-input" placeholder="Your name" type="text" />
+              <input className="form-input" placeholder="Your name" type="text" name="name" value={formData.name} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <label className="form-label">Email</label>
-              <input className="form-input" placeholder="your@email.com" type="email" />
+              <input className="form-input" placeholder="your@email.com" type="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
           </div>
           <div className="form-group">
             <label className="form-label">Subject</label>
-            <input className="form-input" placeholder="How does saving work?" type="text" />
+            <input className="form-input" placeholder="How does saving work?" type="text" name="subject" value={formData.subject} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label className="form-label">Message</label>
-            <textarea className="form-input form-textarea" placeholder="Tell us how we can help..."></textarea>
+            <textarea className="form-input form-textarea" placeholder="Tell us how we can help..." name="message" value={formData.message} onChange={handleChange} required></textarea>
           </div>
-          <button className="form-submit">Send Message →</button>
-        </div>
+          <button type="submit" className="form-submit">Send Message →</button>
+        </form>
         <div className="contact-info">
           <div className="contact-item">
             <div className="contact-icon"><MdEmail /></div>
